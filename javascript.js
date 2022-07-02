@@ -1,65 +1,30 @@
-// for loops 
-let arr = ['nghia', 'nghia1', 'ngocanh','ngocanh1'];
+//function
+function sum(a, b) {
+ return a + b;
+}
+console.log(sum(16,9))
+let c = sum(10,29)
+console.log(c)
 
-// for(let i = 0; i < arr.length; i++){
-//     if(arr[i].length % 2 == 0 )  console.log(arr[i]);
-   
-// };  
+//arrow function
+let sum = (a, b) => {
+  return a + b;
+}
+console.log(sum(16,9))
 
-
-// while loops
-// let i = 0;
-// while(i < arr.length)
-// {
-//     console.log(arr[i])
-//     i++;
-// }
-
-
-// break
-
-// for(let i = 0; i < arr.length; i++){
-//     console.log('i =', i)
-//     if(arr[i] === 'nghia1' ) {
-//         console.log(arr[i]);
-//         break;
-//     }
+//callblacks
+let sum = (a,b, callblacks) => {
+  let tong = a + b
+  setTimeout(() => {
+    callblacks(tong)
+  }, 5000)
   
-// };  
+}   
 
+let print = (message) =>
+{
+  console.log("tong =",message)
+}
 
-// for(let i = 0; i < arr.length; i++){
-//     if(arr[i] === 'nghia1' ) {
-//         console.log(arr[i]);
-//     }
-//     console.log('i =', i)
-// };  
+sum(6,9,print)
 
-
-
-// switch case
-let day = "";
-switch (new Date().getDay()) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-       day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-  };
-
-  console.log(day)
